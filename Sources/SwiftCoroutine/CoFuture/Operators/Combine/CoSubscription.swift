@@ -7,7 +7,11 @@
 //
 
 #if canImport(Combine)
+#if OPENCOMBINE_COMPATIBILITY_TEST
 import Combine
+#else
+import OpenCombine
+#endif
 
 @available(OSX 10.15, iOS 13.0, *)
 internal final class CoSubscription<S: Subscriber, T>: Subscription where S.Input == T, S.Failure == Error {

@@ -7,7 +7,11 @@
 //
 
 #if canImport(Combine)
+#if OPENCOMBINE_COMPATIBILITY_TEST
 import Combine
+#else
+import OpenCombine
+#endif
 
 @available(OSX 10.15, iOS 13.0, *)
 extension CoFuture {

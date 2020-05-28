@@ -6,7 +6,7 @@
 //  Copyright © 2020 Alex Belozierov. All rights reserved.
 //
 
-#if os(Linux)
+#if os(Linux) || os(Android)
 import Glibc
 
 extension Int {
